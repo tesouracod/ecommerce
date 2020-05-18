@@ -1,0 +1,19 @@
+{
+    "name": "tesouracod/ecommerce",
+    "authors": [
+        {
+            "name": "Tesoura Danque",
+            "email": "tesouradanque@gmail.com"
+        }
+    ],
+    "require": {
+    	"phpmailer/phpmailer":"5.2.27",
+    	"slim/slim":"2.0",
+    	"rain/raintpl":"3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "vendor\\tesouracod\\php-classes\\src"
+        }
+    }
+}
