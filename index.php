@@ -2,14 +2,18 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Tesoura\page;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+    $page = new page();
 
+    $page->setTpl("index");
 });
 
 $app->run();

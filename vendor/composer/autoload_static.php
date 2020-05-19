@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/tesouracod/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tesoura\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Tesoura\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tesouracod/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitcab1216a115cc49ff9935f7eead5fc98::$classMap;
 
